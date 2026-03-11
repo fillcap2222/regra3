@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Regra de 3</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.linha{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin:10px 0;
+}
+
+.texto{
+    font-size:16px;
+}
+
+.assimcomo{
+    margin:10px 0;
+    font-style:italic;
+    color:#555;
+}
+
+input{
+    width:80px;
+    padding:8px;
+    font-size:16px;
+    text-align:center;
+}
+
+.resultado{
+    width:80px;
+    padding:8px;
+    background:#eee;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Regra de 3</h2>
+
+<div class="linha">
+<input id="a" type="text" placeholder="A">
+<span class="texto">está para</span>
+<input id="b" type="text" placeholder="B">
+</div>
+
+<div class="assimcomo">
+assim como
+</div>
+
+<div class="linha">
+<input id="c" type="text" placeholder="C">
+<span class="texto">está para</span>
+<div class="resultado" id="resultado">X</div>
+</div>
+
+</div>
+
+<script>
+
+const campos = ["a","b","c"];
+
+campos.forEach(id=>{
+document.getElementById(id).addEventListener("input",calcular);
+});
+
+function normalizar(valor){
+if(!valor) return NaN;
+return parseFloat(valor.replace(",","."));
+}
+
+function formatarNumero(num){
+
+let arredondado = Number(num.toFixed(6));
+
+return arredondado.toString();
+
+}
+
+function calcular(){
+
+let a = normalizar(document.getElementById("a").value);
+let b = normalizar(document.getElementById("b").value);
+let c = normalizar(document.getElementById("c").value);
+
+if(isNaN(a) || isNaN(b) || isNaN(c) || a === 0){
+document.getElementById("resultado").innerText = "X";
+return;
+}
+
+let x = (b * c) / a;
+
+document.getElementById("resultado").innerText = formatarNumero(x);
+
+}
+
+</script>
+
+</body>
+</html>
