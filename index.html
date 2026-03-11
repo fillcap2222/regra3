@@ -154,5 +154,11 @@ document.getElementById("resultado").innerText = formatarNumero(x);
 
 </script>
 
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+
 </body>
 </html>
