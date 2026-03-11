@@ -2,60 +2,91 @@
 
 <html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="manifest.json">
+
 <title>Calculadora de Regra de 3</title>
+
+<link rel="manifest" href="manifest.json">
 
 <style>
 
 body{
     font-family: Arial, sans-serif;
     background:#f2f2f2;
+    margin:0;
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
 }
 
 .container{
     background:white;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.15);
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,0.15);
     text-align:center;
+    width:90%;
+    max-width:420px;
+}
+
+h2{
+    margin-top:0;
 }
 
 .linha{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
-    margin:10px 0;
+    gap:12px;
+    margin:14px 0;
+    flex-wrap:wrap;
 }
 
 .texto{
-    font-size:16px;
+    font-size:18px;
 }
 
 .assimcomo{
-    margin:10px 0;
+    margin:12px 0;
     font-style:italic;
     color:#555;
+    font-size:18px;
 }
 
 input{
-    width:80px;
-    padding:8px;
-    font-size:16px;
+    width:90px;
+    padding:12px;
+    font-size:18px;
     text-align:center;
+    border-radius:6px;
+    border:1px solid #ccc;
 }
 
 .resultado{
-    width:80px;
-    padding:8px;
+    width:90px;
+    padding:12px;
     background:#eee;
-    border-radius:5px;
-    font-size:16px;
+    border-radius:6px;
+    font-size:18px;
     font-weight:bold;
+}
+
+@media (max-width:400px){
+
+input{
+width:70px;
+font-size:16px;
+}
+
+.resultado{
+width:70px;
+font-size:16px;
+}
+
 }
 
 </style>
@@ -100,11 +131,8 @@ return parseFloat(valor.replace(",","."));
 }
 
 function formatarNumero(num){
-
 let arredondado = Number(num.toFixed(6));
-
 return arredondado.toString();
-
 }
 
 function calcular(){
