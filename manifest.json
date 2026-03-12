@@ -1,20 +1,20 @@
 {
-  "id": "/regra3/",
-  "name": "Calculadora de Regra de 3",
+  "name": "Calculadora Regra de 3",
   "short_name": "Regra3",
-  "start_url": "/regra3/",
-  "scope": "/regra3/",
+  "description": "Calculadora simples de regra de 3",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#2c7be5",
   "icons": [
     {
-      "src": "/regra3/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/regra3/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
