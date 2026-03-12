@@ -2,7 +2,6 @@
   "id": "/regra3/",
   "name": "Calculadora de Regra de 3",
   "short_name": "Regra3",
-  "description": "Calculadora simples de regra de três.",
   "start_url": "/regra3/",
   "scope": "/regra3/",
   "display": "standalone",
