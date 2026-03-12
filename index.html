@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2c7be5">
 
 <title>Calculadora de Regra de 3</title>
 
@@ -155,13 +156,14 @@ document.getElementById("resultado").innerText = formatarNumero(x);
 </script>
 
 <script>
-if ('serviceWorker' in navigator) {
-navigator.serviceWorker.register('/regra3/sw.js', { scope: '/regra3/' });
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
 }
 </script>
 
 </body>
 </html>
+
 
 
 
